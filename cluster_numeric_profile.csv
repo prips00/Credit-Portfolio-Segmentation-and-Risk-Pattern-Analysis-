@@ -1,0 +1,3 @@
+cluster,revenue,dti_n,loan_amnt,fico_n,issue_year,issue_month
+0,55373.44,18.5,10000.0,687.0,2015.0,7.0
+1,120000.0,15.1,24000.0,702.0,2015.0,6.0

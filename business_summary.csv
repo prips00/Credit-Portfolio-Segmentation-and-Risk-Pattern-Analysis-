@@ -1,0 +1,3 @@
+cluster,borrower_count,median_annual_income,median_dti,median_loan_amount,median_fico,historical_default_rate,anomaly_count,historical_default_rate_pct
+0,756798,55373.445,18.5,10000.0,687.0,0.20858009667044575,6835,20.858009667044573
+1,243202,120000.0,15.1,24000.0,702.0,0.17274117811531156,5533,17.274117811531156

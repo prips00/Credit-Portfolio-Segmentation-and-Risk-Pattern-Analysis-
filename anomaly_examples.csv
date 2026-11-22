@@ -1,0 +1,16 @@
+revenue,dti_n,loan_amnt,fico_n,emp_length,purpose,home_ownership_n,cluster,Default
+60000.0,3.36,2100,747.0,1 year,other,OWN,0,0
+12860.0,0.0,2200,797.0,NI,medical,OWN,0,0
+50000.0,13.06,20000,682.0,4 years,major_purchase,OWN,0,0
+25000.0,1.03,2200,757.0,3 years,major_purchase,RENT,0,1
+75000.0,13.2,3000,742.0,3 years,other,OWN,0,1
+41717.0,6.1,20000,777.0,5 years,other,OWN,0,0
+210000.0,7.83,1500,757.0,7 years,credit_card,OWN,1,0
+153000.0,20.78,40000,747.0,< 1 year,home_improvement,OWN,1,0
+60000.0,3.16,5000,792.0,3 years,medical,MORTGAGE,0,0
+360000.0,5.59,35000,697.0,3 years,credit_card,MORTGAGE,1,0
+700000.0,2.2,8000,667.0,5 years,major_purchase,RENT,1,0
+24000.0,1.15,4000,732.0,8 years,medical,RENT,0,0
+43000.0,33.23,8000,662.0,NI,home_improvement,OWN,0,0
+200004.0,4.14,5000,672.0,NI,medical,OWN,1,1
+264000.0,16.67,35000,672.0,1 year,other,OWN,1,1
