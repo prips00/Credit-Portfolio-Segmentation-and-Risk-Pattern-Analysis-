@@ -8,7 +8,7 @@ Credit Portfolio Segmentation and Risk Pattern Analysis is a Machine Learning pr
 The project applies clustering algorithms to segment borrowers based on features such as revenue, debt-to-income ratio, loan amount, FICO score and employment experience.
 
 2. Project Objectives
-Perform data quality analysis and preprocessing.
+Perform data quality analysis and preprocessing./
 Explore financial and credit-related characteristics of borrowers.
 Identify potential outliers in numerical features.
 Apply K-Means clustering to segment borrowers.
