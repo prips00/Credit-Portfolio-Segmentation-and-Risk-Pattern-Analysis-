@@ -1,114 +1,110 @@
-# Project-1
-This project is part of my AIML course curriculum from HCL-Guvi. I have done Credit Portfolio Segmentation and  Risk Patten Analysis using Machine Learning.
+# Credit Portfolio Segmentation and Risk Pattern Analysis
 
-## Credit Portfolio Segmentation and Risk Pattern Analysis
+## 1. Project Overview
 
-1. Project Overview
-Credit Portfolio Segmentation and Risk Pattern Analysis is a Machine Learning project that aims to identify groups of borrowers with similar financial and credit characteristics using unsupervised learning techniques.
-The project applies clustering algorithms to segment borrowers based on features such as revenue, debt-to-income ratio, loan amount, FICO score and employment experience.
+This project is part of my AIML Course from HCL-Guvi. It focuses on analyzing borrower data and grouping borrowers based on their financial and credit characteristics using Machine Learning.
 
-2. Project Objectives
-Perform data quality analysis and preprocessing./
-Explore financial and credit-related characteristics of borrowers.
-Identify potential outliers in numerical features.
-Apply K-Means clustering to segment borrowers.
-Evaluate clustering quality using suitable evaluation metrics.
-Profile clusters based on financial and credit characteristics.
-Compare historical default rates across identified clusters.
-Generate business insights from borrower segmentation.
+The main idea is to understand different borrower groups, study their financial patterns, and analyze historical loan default rates. I utilized clustering algorithms to identify borrower segments and Isolation Forest to find unusual borrower records. I have also developed an interactive Streamlit dashboard to display the results.
 
-3. Dataset Description
-Dataset: loans_granting_model_dataset.csv
-Dataset size: 1,347,681 records
-Number of columns: 15
-The dataset contains borrower-related financial, employment, geographical and loan information.
-Key Features
-Feature
-Description
-revenue
-Borrower's revenue
-dti_n
-Debt-to-income ratio
-loan_amnt
-Loan amount
-fico_n
-FICO credit score
-experience_c
-Employment experience-related feature
-emp_length
-Employment length
-purpose
-Loan purpose
-home_ownership_n
-Home ownership status
-addr_state
-Borrower's state
-issue_d
-Loan issue date
-Default
-Historical default indicator
+## 2. Project Objectives
 
-Note: The Default variable is excluded from clustering and used only for post-clustering historical default analysis.
+- Understand borrower and loan-related data.
+- Perform data cleaning and preprocessing.
+- Group borrowers based on their financial characteristics.
+- Apply different clustering algorithms.
+- Visualize borrower groups using dimensionality reduction techniques.
+- Compare clustering performance using evaluation metrics.
+- Analyze historical default rates across clusters.
+- Identify unusual borrower records using anomaly detection.
+- Build an interactive dashboard using Streamlit.
 
-4. Technologies and Libraries
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-Jupyter Notebook
+## 3. Project Workflow
 
-5. Project Workflow
-Step 1: Data Loading and Understanding
-Load the dataset using Pandas.
-Examine dataset dimensions, data types and statistical summaries.
-Understand numerical and categorical features.
-Step 2: Data Quality Analysis
-Identify missing values.
-Check duplicate records and duplicate IDs.
-Examine unique values in categorical columns.
-Identify constant features.
-Check inconsistent values and data types.
-Step 3: Data Cleaning and Preprocessing
-Handle missing values.
-Remove duplicate records where necessary.
-Standardize categorical text values.
-Convert date columns into appropriate formats.
-Prepare numerical and categorical features for analysis.
-Step 4: Exploratory Data Analysis
-Univariate analysis.
-Numerical feature distributions.
-Categorical feature distributions.
-Boxplot analysis.
-Potential outlier detection using the IQR method.
-Step 5: Feature Preparation
-Select relevant financial and credit features.
-Apply numerical imputation and scaling.
-Encode categorical variables.
-Prepare the feature matrix for clustering.
-Step 6: Model Development
-Apply MiniBatch K-Means clustering.
-Select the number of clusters using model evaluation.
-Train the final clustering model.
-Assign cluster labels to borrowers.
-Step 7: Clustering Evaluation
-Evaluate clustering quality using:
-Silhouette Score
-Davies-Bouldin Index
-Calinski-Harabasz Index
-Step 8: Cluster Profiling
-Analyse each cluster based on:
-Average and median revenue.
-Debt-to-income ratio.
-Loan amount.
-FICO score.
-Employment experience.
-Loan purpose.
-Home ownership.
-Step 9: Credit Risk Analysis
-Compare historical default rates across clusters.
-Identify borrower segments with different historical default patterns.
-Examine geographical and temporal patterns where relevant.
+### Step 1: Data Loading and Understanding
+- Loaded the loan dataset using Pandas.
+- Checked the number of rows and columns.
+- Examined data types and basic statistics.
+- Identified numerical and categorical columns.
 
+### Step 2: Data Cleaning and Preprocessing
+- Checked missing values and duplicate records.
+- Handled incorrect data types.
+- Examined outliers.
+- Converted date columns into the required format.
+- Created additional features from loan issue dates.
+
+### Step 3: Exploratory Data Analysis (EDA)
+- Studied numerical and categorical features.
+- Created different graphs to understand data distributions.
+- Analyzed relationships between financial variables.
+- Used correlation analysis to understand feature relationships.
+
+### Step 4: Feature Engineering and Scaling
+- Selected important numerical and categorical features.
+- Handled missing values using imputation.
+- Applied RobustScaler to numerical features.
+- Used One-Hot Encoding for categorical features.
+
+### Step 5: Dimensionality Reduction
+
+Used three techniques to visualize borrower data in two dimensions:
+
+- **PCA:** To reduce the number of features while retaining important information.
+- **t-SNE:** To visualize similarities between borrowers.
+- **UMAP:** To explore patterns and groups in the dataset.
+
+### Step 6: Clustering
+
+Applied the following clustering algorithms:
+
+- K-Means Clustering
+- Hierarchical Clustering
+- DBSCAN
+
+I used the Silhouette Score and Inertia to compare different K values for K-Means and select a suitable number of clusters.
+
+### Step 7: Borrower Segment Analysis
+
+Analyzed the characteristics of each borrower group.
+
+The analysis includes:
+- Median FICO score.
+- Median Debt-to-Income (DTI) ratio.
+- Historical default rate by cluster.
+
+### Step 8: Anomaly Detection
+
+Used the Isolation Forest algorithm to identify unusual borrower records.
+
+Analyzed the detected anomalies to understand their financial characteristics.
+
+## 5. Streamlit Dashboard
+
+Developed an interactive dashboard to present the project results.
+
+The dashboard contains five sections:
+
+1. **Overview:** Displays important portfolio information and borrower statistics.
+2. **Borrower Segmentation:** Shows borrower distribution and cluster characteristics.
+3. **Dimensionality Reduction:** Visualizes PCA, t-SNE, and UMAP results.
+4. **Clustering Evaluation:** Displays clustering evaluation metrics and K-Means results.
+5. **Default & Anomaly Analysis:** Shows historical default rates and detected anomalies.
+
+
+## 6. Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Data cleaning and preprocessing.
+- Exploratory Data Analysis.
+- Feature engineering and scaling.
+- Unsupervised Machine Learning.
+- Clustering algorithms and evaluation.
+- Dimensionality reduction techniques.
+- Anomaly detection.
+- Building interactive dashboards using Streamlit.
+
+## 7. Disclaimer
+
+This project is developed for learning and educational purposes. The analysis is intended to understand borrower segments and historical credit patterns. It should not be used as the sole basis for real-world lending or credit approval decisions.
 
