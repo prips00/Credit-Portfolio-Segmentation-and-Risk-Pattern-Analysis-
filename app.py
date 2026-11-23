@@ -8,7 +8,7 @@ from pathlib import Path
 #Page title
 st.set_page_config(
     page_title="Credit Portfolio Segmentation and Risk Pattern Analysis",
-    page_icon="📊",
+    page_icon="🏦",
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
@@ -41,11 +41,7 @@ def load_results():
 
     return results
 
-
-#To HANDLE scenarion when data is not available
-if not DATA_DIR.exists():
-    st.error("streamlit_data folder not found.")
-    st.stop()
+results = load_results()
 
 
 #Sidebar
@@ -319,4 +315,5 @@ st.caption(
     "Credit Portfolio Segmentation and Risk Pattern Analysis | "
     "Machine Learning Dashboard"
 )
+
 
